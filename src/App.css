@@ -1,17 +1,93 @@
+/* Apply a background image to the entire app */
 .App {
-  font-family: 'Segoe UI', sans-serif;
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-size: cover; /* Ensure the background image covers the entire page */
+  height: 100vh; /* Ensure it covers the full viewport */
+  font-family: 'Arial', sans-serif; /* Modern, clean font */
+  color: #333; /* Dark text color for readability */
+  padding: 0;
+  margin: 0;
+}
+
+/* Add padding to the body and set some global properties */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
   color: #333;
 }
-h1 {
-  color: #005b96;
+
+/* Style for header */
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background for the header */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  border-bottom: 2px solid #fff;
 }
-a {
-  color: #007acc;
-  text-decoration: none;
-}
+
+/* Style for sections */
 section {
-  margin-bottom: 2rem;
+  padding: 40px 20px; /* Reduced padding for leaner sections */
+  margin: 30px 15px; /* Smaller margin around sections */
+  border-radius: 8px; /* Slightly less rounded corners */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for sections */
+  max-width: 1000px; /* Restrict width for a leaner feel */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style for section titles */
+h2 {
+  text-align: center;
+  font-size: 2.2em; /* Slightly smaller titles */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Content center */
+.App .content {
+  max-width: 1000px; /* Limit content width for a leaner center */
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add subtle animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+section {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .App {
+    background-size: auto; /* Adjust background for smaller screens */
+  }
+
+  header {
+    font-size: 1.2em;
+  }
+
+  section {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
 }

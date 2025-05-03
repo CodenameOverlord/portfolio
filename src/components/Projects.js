@@ -1,14 +1,51 @@
-import React from 'react';
+import React from "react";
+import "./Projects.css";
+
+const projects = [
+  {
+    title: "Portfolio Website",
+    description: "A React-based personal portfolio hosted on GitHub Pages.",
+    link: "https://codenameoverlord.github.io/portfolio/",
+    image: process.env.PUBLIC_URL + "/images/portfolioProject.png",
+  },
+  {
+    title: "Kafka Tracker",
+    description: "Location tracker using Kafka and Spring Boot.",
+    link: "https://github.com/CodenameOverlord/kafka-tracker",
+    image: process.env.PUBLIC_URL + "/images/locationTrackingApplication.png",
+  },
+  {
+    title: "Auth Server",
+    description: "OAuth2 authentication server using Spring Security.",
+    link: "https://github.com/CodenameOverlord/oauth-server",
+    image: process.env.PUBLIC_URL + "/images/portfolioProject.png",
+  },
+  // Add more projects here
+];
 
 function Projects() {
   return (
-    <section style={{ padding: '1rem' }}>
+    <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li><strong>Location Tracker</strong> – Real-time system using Kafka & Spring Boot</li>
-        <li><strong>OAuth2 Auth Server</strong> – Secure login with Spring Security</li>
-        <li><strong>Portfolio</strong> – This site! Built in React, hosted via GitHub Pages</li>
-      </ul>
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <a
+            key={index}
+            className="project-card"
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={project.image}
+              alt={`${project.title} logo`}
+              className="project-image"
+            />
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+          </a>
+        ))}
+      </div>
     </section>
   );
 }
