@@ -1,13 +1,30 @@
 import React from 'react';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'; // Imported LinkedIn icon
+import './Contact.css';
 
-function Contact() {
+const Contact = () => {
+  const contactInfo = [
+    { icon: <FaLinkedin />, label: 'LinkedIn', value: 'linkedin.com/in/utsav', link: 'https://www.linkedin.com/in/utsav' },
+    { icon: <FaGithub />, label: 'GitHub', value: 'github.com/CodenameOverlord', link: 'https://github.com/CodenameOverlord' },
+    { icon: <FaEnvelope />, label: 'Email', value: 'utsavkumardatta@gmail.com', link: 'mailto:utsavkumardatta@gmail.com' },
+  ];
+
   return (
-    <section style={{ padding: '1rem' }}>
-      <h2>Contact</h2>
-      <p>Email: utsavkumardatta@gmail.com</p>
-      <p>GitHub: <a href="https://github.com/CodenameOverlord" target="_blank" rel="noreferrer">CodenameOverlord</a></p>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div className="contact-grid">
+        {contactInfo.map((item, index) => (
+          <div className="contact-card" key={index}>
+            <div className="contact-icon">{item.icon}</div>
+            <h3>{item.label}</h3>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              {item.value}
+            </a>
+          </div>
+        ))}
+      </div>
     </section>
   );
-}
+};
 
 export default Contact;

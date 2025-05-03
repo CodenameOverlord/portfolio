@@ -1,5 +1,6 @@
 /* Apply a background image to the entire app */
 .App {
+  /* background-image: url('/src/images/bgImage.png'); Replace with your image URL */
   background-position: center center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent image repetition */
   background-size: cover; /* Ensure the background image covers the entire page */
@@ -15,6 +16,7 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   color: #333;
+  background: transparent; /* Ensure the body doesn’t inherit the background image */
 }
 
 /* Style for header */
@@ -25,6 +27,8 @@ header {
   text-align: center;
   font-size: 1.5em;
   border-bottom: 2px solid #fff;
+  z-index: 10; /* Ensure header stays on top */
+  position: relative; /* Keeps the header on top */
 }
 
 /* Style for sections */
@@ -37,6 +41,7 @@ section {
   max-width: 1000px; /* Restrict width for a leaner feel */
   margin-left: auto;
   margin-right: auto;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Style for section titles */
@@ -66,10 +71,6 @@ h2 {
   100% {
     opacity: 1;
   }
-}
-
-section {
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Responsive design for smaller screens */
