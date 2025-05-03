@@ -31,12 +31,13 @@
   }
   
   .project-image {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     margin-bottom: 15px;
     border-radius: 50%;
   }
+  
   
   .project-card h3 {
     font-size: 1.5rem;

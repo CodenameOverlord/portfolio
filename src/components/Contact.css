@@ -38,7 +38,7 @@
   
   /* Icon styling inside each card */
   .contact-icon {
-    font-size: 3rem; /* Size of the icon */
+    font-size: 350%; /* Size of the icon */
     color: #007bff; /* Icon color */
     margin-bottom: 15px;
   }

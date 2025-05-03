@@ -18,7 +18,7 @@ const projects = [
     title: "Auth Server",
     description: "OAuth2 authentication server using Spring Security.",
     link: "https://github.com/CodenameOverlord/oauth-server",
-    image: process.env.PUBLIC_URL + "/images/portfolioProject.png",
+    image: process.env.PUBLIC_URL + "/images/authServer.png",
   },
   // Add more projects here
 ];
