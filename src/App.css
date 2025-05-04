@@ -76,3 +76,24 @@ h2 {
     font-size: 1.2em;
   }
 }
+
+/* Applies to all interactive elements like links, buttons, cards */
+a:hover,
+button:hover,
+.project-card:hover,.profile-pic:hover,.contact-card:hover {
+  cursor: pointer;
+  animation: cursorPulse 0.5s ease-out;
+}
+
+
+@keyframes cursorPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
