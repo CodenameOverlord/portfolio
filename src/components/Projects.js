@@ -5,19 +5,19 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A React-based personal portfolio hosted on GitHub Pages.",
-    link: "https://codenameoverlord.github.io/portfolio/",
+    link: "https://github.com/CodenameOverlord/portfolio",
     image: process.env.PUBLIC_URL + "/images/portfolioProject.png",
   },
   {
-    title: "Kafka Tracker",
+    title: "Location Tracker",
     description: "Location tracker using Kafka and Spring Boot.",
-    link: "https://github.com/CodenameOverlord/kafka-tracker",
+    link: "https://github.com/CodenameOverlord/location_saver",
     image: process.env.PUBLIC_URL + "/images/locationTrackingApplication.png",
   },
   {
     title: "Auth Server",
     description: "OAuth2 authentication server using Spring Security.",
-    link: "https://github.com/CodenameOverlord/oauth-server",
+    link: "https://github.com/CodenameOverlord/AuthServer-security-final",
     image: process.env.PUBLIC_URL + "/images/authServer.png",
   },
   // Add more projects here
