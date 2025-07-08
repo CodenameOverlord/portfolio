@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
   const contactInfo = [
-    { icon: <FaLinkedin />, label: 'LinkedIn', value: 'linkedin.com/in/utsav', link: 'https://www.linkedin.com/in/utsav' },
+    { icon: <FaLinkedin />, label: 'LinkedIn', value: 'linkedin.com/in/utsav', link: 'https://www.linkedin.com/in/utsavkumardatta/' },
     { icon: <FaGithub />, label: 'GitHub', value: 'github.com/CodenameOverlord', link: 'https://github.com/CodenameOverlord' },
     { icon: <FaEnvelope />, label: 'Email', value: 'utsavkumardatta@gmail.com', link: 'mailto:utsavkumardatta@gmail.com' },
   ];
